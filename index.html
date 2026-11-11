@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Garage F1 — Премиальный детейлинг и оклейка авто в Видном | Ермолинская 28</title>
+  <meta name="description" content="Студия детейлинга Garage F1 в Видном: оклейка полиуретановыми плёнками, керамика, полировка, химчистка салона и мойка двигателя паром. Рейтинг 5.0 на Яндекс Картах.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --card-bg: #ffffff;
+      --dark-sec: #181b22;
+      --dark-card: #222631;
+      --border: #e2e8f0;
+      --border-dark: #2d3342;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #64748b;
+      --red: #dc2626;
+      --red-hover: #b91c1c;
+      --red-light: #fef2f2;
+      --red-border: #fecaca;
+      --green: #16a34a;
+      --green-glow: rgba(22, 163, 74, 0.2);
+      --amber: #f59e0b;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.5;
+      padding-bottom: 84px;
+      overflow-x: hidden;
+    }
+
+    @media (min-width: 900px) {
+      body { padding-bottom: 0; }
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    @media (min-width: 768px) {
+      .container { padding: 0 24px; }
+    }
+
+    /* TOP HEADER */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(15, 23, 42, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      padding: 14px 0;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-box {
+      border: 1.5px solid #fff;
+      padding: 4px 10px;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 4px;
+    }
+    .brand-loc {
+      font-size: 11px;
+      color: #94a3b8;
+      display: none;
+    }
+    @media (min-width: 600px) {
+      .brand-loc { display: block; }
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 22px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #cbd5e1;
+    }
+    .nav-links a:hover { color: #fff; }
+
+    .header-contacts {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .header-phone {
+      display: none;
+      font-family: var(--mono);
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .btn-header-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--red);
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 9px 16px;
+      border-radius: 8px;
+      transition: all 0.15s ease;
+    }
+    .btn-header-wa:hover { background: var(--red-hover); transform: translateY(-1px); }
+
+    @media (min-width: 900px) {
+      .nav-links { display: flex; }
+      .header-phone { display: block; }
+    }
+
+    /* HERO SECTION (CINEMATIC FULL-WIDTH BACKGROUND) */
+    .hero {
+      position: relative;
+      background: #090b10;
+      color: #fff;
+      padding: 60px 0 70px;
+      overflow: hidden;
+    }
+    @media (min-width: 900px) {
+      .hero { padding: 90px 0 100px; }
+    }
+    .hero-bg-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('assets/garagef1_bay.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.35;
+      filter: blur(1px);
+    }
+    .hero-gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(9, 11, 16, 0.75) 0%, rgba(9, 11, 16, 0.92) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 780px;
+    }
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .badge-yandex {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(6px);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .badge-yandex svg { width: 14px; height: 14px; fill: var(--amber); }
+    .badge-place {
+      background: rgba(220, 38, 38, 0.2);
+      border: 1px solid rgba(220, 38, 38, 0.4);
+      color: #fca5a5;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.6px;
+      margin-bottom: 18px;
+    }
+    @media (min-width: 900px) {
+      .hero h1 { font-size: 48px; line-height: 1.1; }
+    }
+
+    .hero-bullets {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .hero-bullet-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      color: #e2e8f0;
+    }
+    .hero-bullet-check {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--red);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn-hero-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--red);
+      color: #fff;
+      font-weight: 800;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(220, 38, 38, 0.4);
+      transition: all 0.15s ease;
+    }
+    .btn-hero-primary:hover { background: var(--red-hover); transform: translateY(-1px); }
+
+    .btn-hero-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 24px;
+      border-radius: 10px;
+      backdrop-filter: blur(6px);
+      transition: all 0.15s ease;
+    }
+    .btn-hero-ghost:hover { background: rgba(255, 255, 255, 0.16); border-color: #fff; }
+
+    /* STATS STRIP */
+    .stats-strip {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+    .stats-strip-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    @media (min-width: 768px) {
+      .stats-strip-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .strip-stat-item {
+      text-align: center;
+      padding: 6px;
+    }
+    .strip-stat-num {
+      font-family: var(--mono);
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--text);
+    }
+    .strip-stat-lbl {
+      font-size: 12px;
+      color: var(--text-dim);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    /* SECTION HEADINGS */
+    .section {
+      padding: 44px 0;
+    }
+    @media (min-width: 900px) {
+      .section { padding: 64px 0; }
+    }
+    .sec-head-center {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 36px;
+    }
+    .sec-title-lg {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    @media (min-width: 900px) {
+      .sec-title-lg { font-size: 34px; }
+    }
+    .sec-desc-lg {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* "СТИЛЬ ОКОН" — WIDE 2-COLUMN SERVICE WINDOWS */
+    .services-windows-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 768px) {
+      .services-windows-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    }
+
+    .service-window {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      transition: all 0.25s ease;
+    }
+    .service-window:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+    }
+
+    .window-img-box {
+      width: 100%;
+      aspect-ratio: 16/10;
+      position: relative;
+      background: #f1f5f9;
+      overflow: hidden;
+    }
+    .window-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .service-window:hover .window-img-box img {
+      transform: scale(1.04);
+    }
+    .window-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .window-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+    .window-title {
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .window-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .window-note {
+      font-size: 12px;
+      color: var(--text-dim);
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+    .window-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+    }
+    .window-price {
+      font-family: var(--mono);
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--text);
+    }
+    .window-btn {
+      background: var(--red);
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      transition: all 0.15s ease;
+    }
+    .window-btn:hover { background: var(--red-hover); }
+
+    /* SECTION PACKAGES (DARK CONTRAST SECTION FROM REFERENCE) */
+    .packages-section {
+      background: var(--dark-sec);
+      color: #fff;
+      padding: 60px 0;
+    }
+    @media (min-width: 900px) {
+      .packages-section { padding: 80px 0; }
+    }
+    .packages-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 800px) {
+      .packages-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .package-card {
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease;
+    }
+    .package-card:hover { transform: translateY(-4px); }
+    .package-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+    .package-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+    .package-name {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+    .package-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .package-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .package-list li::before {
+      content: "✓";
+      color: var(--red);
+      font-weight: 900;
+    }
+    .package-price {
+      font-family: var(--mono);
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--text);
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .btn-package {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: var(--red);
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 12px;
+      border-radius: 8px;
+      transition: background 0.15s ease;
+    }
+    .btn-package:hover { background: var(--red-hover); }
+
+    /* PAYMENT METHODS (FROM REFERENCE) */
+    .payments-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    @media (min-width: 768px) {
+      .payments-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .payment-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    }
+    .payment-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .payment-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* INTERACTIVE CALCULATOR */
+    .calc-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+    }
+    @media (min-width: 900px) {
+      .calc-box { padding: 36px; }
+    }
+    .calc-label {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+    .calc-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+    .chip {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 9px 15px;
+      border-radius: 9px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.15s ease;
+    }
+    .chip:hover { border-color: var(--text-muted); }
+    .chip.active {
+      background: var(--red);
+      border-color: var(--red);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(220, 38, 38, 0.25);
+    }
+    .calc-total-bar {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    @media (min-width: 600px) {
+      .calc-total-bar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    .calc-total-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .calc-total-sub {
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+    .calc-price-display {
+      font-family: var(--mono);
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--red);
+    }
+    .btn-calc-wa {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--green);
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 13px 22px;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px var(--green-glow);
+    }
+
+    /* REAL GALLERY / PORTFOLIO */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    @media (min-width: 768px) {
+      .gallery-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    }
+    .gallery-item {
+      position: relative;
+      aspect-ratio: 4/3;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #e2e8f0;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-tag {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    /* REVIEWS SECTION */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 768px) {
+      .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .review-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    }
+    .review-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .review-user {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .review-car {
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+    .review-stars { color: var(--amber); font-size: 14px; letter-spacing: 2px; }
+    .review-body {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* CONTACTS & MAP */
+    .contacts-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+    @media (min-width: 900px) {
+      .contacts-card {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 32px;
+        padding: 36px;
+      }
+    }
+    .contact-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .contact-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: var(--red-light);
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-icon svg { width: 18px; height: 18px; fill: currentColor; }
+    .contact-title {
+      font-size: 11px;
+      color: var(--text-dim);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .contact-val {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--text);
+      margin-top: 1px;
+    }
+
+    .map-btns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .btn-map-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 11px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      transition: all 0.15s ease;
+    }
+    .btn-map-link:hover { background: #f1f5f9; border-color: var(--text); }
+
+    .direct-wa-box {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: #fff;
+      border-radius: 14px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .direct-wa-title {
+      font-size: 18px;
+      font-weight: 900;
+      margin-bottom: 6px;
+    }
+    .direct-wa-desc {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.45;
+      margin-bottom: 18px;
+    }
+    .btn-big-wa {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--green);
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 13px;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px var(--green-glow);
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 28px 0 16px;
+      font-size: 12px;
+      color: var(--text-dim);
+      border-top: 1px solid var(--border);
+      margin-top: 36px;
+    }
+
+    /* STICKY BOTTOM BAR (MOBILE ONLY) */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
+      border-top: 1px solid var(--border);
+      padding: 10px 16px;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.05);
+    }
+    .sticky-inner {
+      max-width: 480px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 10px;
+    }
+    .btn-sticky-call {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: #f1f5f9;
+      border: 1px solid var(--border-strong);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 13px;
+      padding: 12px;
+      border-radius: 10px;
+    }
+    .btn-sticky-wa {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: var(--green);
+      color: #fff;
+      font-weight: 800;
+      font-size: 13px;
+      padding: 12px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px var(--green-glow);
+    }
+
+    @media (min-width: 900px) {
+      .sticky-bar { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand-wrap">
+        <div class="brand-box">GARAGE F1</div>
+        <div class="brand-loc">г. Видное, Ермолинская ул., 28</div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#services">Услуги</a>
+        <a href="#packages">Пакеты</a>
+        <a href="#calculator">Калькулятор</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#reviews">Отзывы 5.0</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="header-contacts">
+        <a href="tel:+79153862727" class="header-phone">+7 (915) 386-27-27</a>
+        <a href="https://wa.me/79153862727?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20%D0%B4%D0%B5%D1%82%D0%B5%D0%B9%D0%BB%D0%B8%D0%BD%D0%B3%20Garage%20F1" class="btn-header-wa">
+          Написать в WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION (CINEMATIC BACKGROUND) -->
+    <section class="hero">
+      <div class="hero-bg-layer"></div>
+      <div class="hero-gradient-overlay"></div>
+
+      <div class="container" style="position: relative; z-index: 10;">
+        <div class="hero-content">
+          <div class="hero-meta">
+            <div class="badge-yandex">
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <span>5.0 на Яндекс Картах</span>
+            </div>
+            <div class="badge-place">Детейлинг-центр в Видном</div>
+          </div>
+
+          <h1>Профессиональный детейлинг и оклейка авто в Видном</h1>
+
+          <div class="hero-bullets">
+            <div class="hero-bullet-item">
+              <div class="hero-bullet-check">✓</div>
+              <span>Защитите кузов от сколов, пескоструя и царапин полиуретаном</span>
+            </div>
+            <div class="hero-bullet-item">
+              <div class="hero-bullet-check">✓</div>
+              <span>Продлите идеальный блеск и гидрофоб автомобиля на 5+ лет</span>
+            </div>
+            <div class="hero-bullet-item">
+              <div class="hero-bullet-check">✓</div>
+              <span>Профессиональные мастера, сухопарная мойка мотора и керамика</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/79153862727?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B4%D0%B5%D1%82%D0%B5%D0%B9%D0%BB%D0%B8%D0%BD%D0%B3" class="btn-hero-primary">
+              Записаться в WhatsApp
+            </a>
+            <a href="#services" class="btn-hero-ghost">
+              Все услуги и цены
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY STATS STRIP -->
+    <div class="stats-strip">
+      <div class="container stats-strip-grid">
+        <div class="strip-stat-item">
+          <div class="strip-stat-num">5.0 ★</div>
+          <div class="strip-stat-lbl">Рейтинг на Яндекс Картах</div>
+        </div>
+        <div class="strip-stat-item">
+          <div class="strip-stat-num">100%</div>
+          <div class="strip-stat-lbl">Оригинальные составы и плёнки</div>
+        </div>
+        <div class="strip-stat-item">
+          <div class="strip-stat-num">5 лет</div>
+          <div class="strip-stat-lbl">Гарантия на полиуретан</div>
+        </div>
+        <div class="strip-stat-item">
+          <div class="strip-stat-num">10:00 – 22:00</div>
+          <div class="strip-stat-lbl">Ежедневно без выходных</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES IN "СТИЛЬ ОКОН" (2-COLUMN CARDS EXACTLY LIKE IN THE REFERENCE) -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="sec-head-center">
+          <h2 class="sec-title-lg">Услуги, которые мы предлагаем</h2>
+          <p class="sec-desc-lg">Выберите направление детейлинга для вашего автомобиля. Честные фиксированные цены из нашего официального прайса.</p>
+        </div>
+
+        <div class="services-windows-grid">
+
+          <!-- WINDOW 1: PPF FILM -->
+          <div class="service-window">
+            <div class="window-img-box">
+              <img src="assets/garagef1_ppf.jpg" alt="Оклейка авто полиуретановой плёнкой">
+              <div class="window-tag">Защита кузова</div>
+            </div>
+            <div class="window-body">
+              <div>
+                <div class="window-title">Оклейка авто полиуретаном (PPF)</div>
+                <div class="window-desc">Антигравийная защита кузова от сколов, гравия, веток и притёртостей. Оклейка зон риска (капот, бампер, фары, крылья, стойки, зеркала) или кузова целиком.</div>
+                <div class="window-note">(итоговая стоимость зависит от класса автомобиля и выбранной плёнки)</div>
+              </div>
+              <div class="window-footer">
+                <div class="window-price">от 45 000 ₽</div>
+                <a href="https://wa.me/79153862727?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BE%D0%BA%D0%BB%D0%B5%D0%B9%D0%BA%D0%B0%20%D0%B0%D0%B2%D1%82%D0%BE%20%D0%BF%D0%BE%D0%BB%D0%B8%D1%83%D1%80%D0%B5%D1%82%D0%B0%D0%BD%D0%BE%D0%BC" class="window-btn">Записаться</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- WINDOW 2: CERAMIC COATING -->
+          <div class="service-window">
+            <div class="window-img-box">
+              <img src="assets/garagef1_grille.jpg" alt="Нанесение нанокерамики">
+              <div class="window-tag">Глубокий блеск</div>
+            </div>
+            <div class="window-body">
+              <div>
+                <div class="window-title">Нанесение керамики (9H)</div>
+                <div class="window-desc">Премиальное керамическое покрытие кузова. Мощный гидрофобный эффект, защита от выгорания, химии и дорожных реагентов, зеркальный карамельный глянец.</div>
+                <div class="window-note">(включает обезжиривание и мягкую подготовку ЛКП)</div>
+              </div>
+              <div class="window-footer">
+                <div class="window-price">15 000 ₽</div>
+                <a href="https://wa.me/79153862727?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BD%D0%B0%D0%BD%D0%B5%D1%81%D1%82%D0%B8%20%D0%BA%D0%B5%D1%80%D0%B0%D0%BC%D0%B8%D0%BA%D1%83%20%D0%B7%D0%B0%2015000%D1%80" class="window-btn">Записаться</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- WINDOW 3: DETAILING WASH -->
+          <div class="service-window">
+            <div class="window-img-box">
+              <img src="assets/garagef1_wash.jpg" alt="Детейлинг мойка кузов-салон">
+              <div class="window-tag">Комплекс</div>
+            </div>
+            <div class="window-body">
+              <div>
+                <div class="window-title">Детейлинг мойка кузов-салон</div>
+                <div class="window-desc">Не просто мойка, а полное возвращение первоначального вида. Трёхфазная деликатная мойка, кисточная чистка шильдиков и зазоров, подвеска, уборка салона.</div>
+                <div class="window-note">(продлевает жизнь материалам и внимание к каждой мелочи)</div>
+              </div>
+              <div class="window-footer">
+                <div class="window-price">12 000 ₽</div>
+                <a href="https://wa.me/79153862727?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B4%D0%B5%D1%82%D0%B5%D0%B9%D0%BB%D0%B8%D0%BD%D0%B3%20%D0%BC%D0%BE%D0%B9%D0%BA%D0%B0%20%D0%BA%D1%83%D0%B7%D0%BE%D0%B2-%D1%81%D0%B0%D0%BB%D0%BE%D0%BD" class="window-btn">Записаться</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- WINDOW 4: DRY CLEANING -->
+          <div class="service-window">
+            <div class="window-img-box">
+              <img src="assets/garagef1_interior.jpg" alt="Химчистка салона автомобиля">
+              <div class="window-tag">Интерьер</div>
+            </div>
+            <div class="window-body">
+              <div>
+                <div class="window-title">Комплексная химчистка салона</div>
+                <div class="window-desc">Глубокая чистка кожи, алькантары, ворса и пластика с консервацией. Включает финишную антибактериальную обработку сухим туманом от запахов.</div>
+                <div class="window-note">(устранение любых застарелых пятен и запаха табака)</div>
+              </div>
+              <div class="window-footer">
+                <div class="window-price">14 000 ₽</div>
+                <a href="https://wa.me/79153862727?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%85%D0%B8%D0%BC%D1%87%D0%B8%D1%81%D1%82%D0%BA%D1%83%20%D1%81%D0%B0%D0%BB%D0%BE%D0%BD%D0%B0" class="window-btn">Записаться</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- WINDOW 5: ENGINE BAY STEAM CLEANING -->
+          <div class="service-window">
+            <div class="window-img-box">
+              <img src="assets/garagef1_engine.jpg" alt="Детейлинг двигателя мойка паром">
+              <div class="window-tag">Подкапотное</div>
+            </div>
+            <div class="window-body">
+              <div>
+                <div class="window-title">Детейлинг двигателя (мойка паром)</div>
+                <div class="window-desc">Безопасная мойка подкапотного пространства сухим паром и диэлектрической химией. Мы вернём двигателю заводской блеск, чтобы капот было приятно открывать.</div>
+                <div class="window-note">(абсолютно безопасно для датчиков и проводки)</div>
+              </div>
+              <div class="window-footer">
+                <div class="window-price">5 000 ₽</div>
+                <a href="https://wa.me/79153862727?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BC%D0%BE%D0%B9%D0%BA%D1%83%20%D0%B4%D0%B2%D0%B8%D0%B3%D0%B0%D1%82%D0%B5%D0%BB%D1%8F%20%D0%BF%D0%B0%D1%80%D0%BE%D0%BC" class="window-btn">Записаться</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- WINDOW 6: WINDSHIELD & HEADLIGHT POLISH -->
+          <div class="service-window">
+            <div class="window-img-box">
+              <img src="assets/garagef1_interior.jpg" alt="Полировка лобового стекла и фар">
+              <div class="window-tag">Оптика и стёкла</div>
+            </div>
+            <div class="window-body">
+              <div>
+                <div class="window-title">Полировка лобового стекла и фар</div>
+                <div class="window-desc">Устранение затёртостей от щёток дворников, пескоструя и мелких сколов без оптических искажений. Полировка фар (2 000 ₽) возвращает заводскую прозрачность.</div>
+                <div class="window-note">(ремонт трещин и сколов лобового — 4 000 ₽)</div>
+              </div>
+              <div class="window-footer">
+                <div class="window-price">8 000 ₽</div>
+                <a href="https://wa.me/79153862727?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9D%D1%83%D0%B6%D0%BD%D0%B0%20%D0%BF%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0%20%D0%BB%D0%BE%D0%B1%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D1%81%D1%82%D0%B5%D0%BA%D0%BB%D0%B0%20/%20%D1%84%D0%B0%D1%80" class="window-btn">Записаться</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES SECTION (DARK BACKGROUND LIKE IN REFERENCE) -->
+    <section class="packages-section" id="packages">
+      <div class="container">
+        <div class="sec-head-center">
+          <h2 class="sec-title-lg" style="color: #fff;">Пакетные предложения</h2>
+          <p class="sec-desc-lg" style="color: #94a3b8;">Выберите комплексный пакет детейлинга, решающий все задачи за 1 визит.</p>
+        </div>
+
+        <div class="packages-grid">
+
+          <div class="package-card">
+            <img src="assets/garagef1_grille.jpg" class="package-img" alt="Пакет Стандарт">
+            <div class="package-body">
+              <div>
+                <div class="package-name">Пакет «Стандарт»</div>
+                <ul class="package-list">
+                  <li>Трёхфазная детейлинг-мойка кузова</li>
+                  <li>Восстановительная полировка фар</li>
+                  <li>Деликатная химчистка салона</li>
+                  <li>Антидождь на переднюю полусферу</li>
+                </ul>
+              </div>
+              <div>
+                <div class="package-price">от 25 000 ₽</div>
+                <a href="https://wa.me/79153862727?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%20%D0%A1%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82" class="btn-package">Выбрать</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="package-card" style="border: 2px solid var(--red);">
+            <img src="assets/garagef1_interior.jpg" class="package-img" alt="Пакет Базовый">
+            <div class="package-body">
+              <div>
+                <div style="font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 0.5px; text-align: center; margin-bottom: 4px;">Хит продаж</div>
+                <div class="package-name">Пакет «Базовый»</div>
+                <ul class="package-list">
+                  <li>Глубокая детейлинг-полировка ЛКП</li>
+                  <li>Полная химчистка салона + сухой туман</li>
+                  <li>Мойка двигателя паром с консервацией</li>
+                  <li>Антидождь на все стёкла вкруг</li>
+                  <li>Чернение шин и уход за пластиком</li>
+                </ul>
+              </div>
+              <div>
+                <div class="package-price">от 30 000 ₽</div>
+                <a href="https://wa.me/79153862727?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%20%D0%91%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D0%B9" class="btn-package">Выбрать</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="package-card">
+            <img src="assets/garagef1_ppf.jpg" class="package-img" alt="Пакет Премиум">
+            <div class="package-body">
+              <div>
+                <div class="package-name">Пакет «Премиум»</div>
+                <ul class="package-list">
+                  <li>Углубленная абразивная полировка ЛКП</li>
+                  <li>Керамическое покрытие 9H (1 слой)</li>
+                  <li>Детейлинг-химчистка с разбором</li>
+                  <li>Мойка подкапотного пространства паром</li>
+                  <li>Антидождь на все стёкла</li>
+                </ul>
+              </div>
+              <div>
+                <div class="package-price">от 35 000 ₽</div>
+                <a href="https://wa.me/79153862727?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%20%D0%9F%D1%80%D0%B5%D0%BC%D0%B8%D1%83%D0%BC" class="btn-package">Выбрать</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section class="section" id="calculator">
+      <div class="container">
+        <div class="sec-head-center">
+          <h2 class="sec-title-lg">Экспресс-калькулятор детейлинга</h2>
+          <p class="sec-desc-lg">Рассчитайте стоимость за 2 клика под тип вашего автомобиля.</p>
+        </div>
+
+        <div class="calc-box">
+          <div class="calc-label">1. Класс вашего автомобиля:</div>
+          <div class="calc-chips" id="carGrid">
+            <div class="chip active" data-c="Седан">Седан (C / D / E-класс)</div>
+            <div class="chip" data-c="Кроссовер">Кроссовер / Универсал</div>
+            <div class="chip" data-c="Внедорожник">Большой внедорожник / Минивэн</div>
+          </div>
+
+          <div class="calc-label">2. Необходимая услуга:</div>
+          <div class="calc-chips" id="srvGrid">
+            <div class="chip active" data-s="Керамика 9H" data-p="15 000 ₽">Нанесение керамики 9H</div>
+            <div class="chip" data-s="Химчистка салона" data-p="14 000 ₽">Химчистка салона + сухой туман</div>
+            <div class="chip" data-s="Детейлинг мойка" data-p="12 000 ₽">Детейлинг мойка кузов-салон</div>
+            <div class="chip" data-s="Полировка лобового" data-p="8 000 ₽">Полировка лобового стекла</div>
+            <div class="chip" data-s="Мойка двигателя" data-p="5 000 ₽">Детейлинг двигателя паром</div>
+            <div class="chip" data-s="Полировка фар" data-p="2 000 ₽">Полировка фар (пара)</div>
+          </div>
+
+          <div class="calc-total-bar">
+            <div>
+              <div class="calc-total-name" id="calcName">Седан • Нанесение керамики 9H</div>
+              <div class="calc-total-sub">Фиксированная стоимость с гарантией качества</div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div class="calc-price-display" id="calcPrice">15 000 ₽</div>
+              <a id="calcLink" href="https://wa.me/79153862727?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F:%20%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD%20%E2%80%A2%20%D0%9D%D0%B0%D0%BD%D0%B5%D1%81%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%B5%D1%80%D0%B0%D0%BC%D0%B8%D0%BA%D0%B8%209H%20(15%20000%20%E2%82%BD)" class="btn-calc-wa">
+                <span>Записаться в WhatsApp</span>
+                ➔
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAYMENT METHODS -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="sec-head-center">
+          <h2 class="sec-title-lg">Удобные способы оплаты</h2>
+          <p class="sec-desc-lg">Комфортные условия для обслуживания вашего автомобиля.</p>
+        </div>
+
+        <div class="payments-grid">
+          <div class="payment-card">
+            <div class="payment-header">
+              <span style="color: var(--red);">●</span>
+              <span>Рассрочка без %</span>
+            </div>
+            <div class="payment-desc">Оформление онлайн без переплат на 3, 6 или 12 месяцев от ведущих банков-партнеров.</div>
+          </div>
+
+          <div class="payment-card">
+            <div class="payment-header">
+              <span style="color: var(--red);">●</span>
+              <span>Оплата Долями</span>
+            </div>
+            <div class="payment-desc">Разбейте сумму на 4 равных платежа. Первые 25% при получении авто, остальное списывается каждые 2 недели.</div>
+          </div>
+
+          <div class="payment-card">
+            <div class="payment-header">
+              <span style="color: var(--red);">●</span>
+              <span>Безналичный расчёт</span>
+            </div>
+            <div class="payment-desc">Оплата картой через эквайринг, QR-код СБП или выставление счёта для юридических лиц с закрывающими документами.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REAL PORTFOLIO (GARAGE F1 WORKS) -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="sec-head-center">
+          <h2 class="sec-title-lg">Портфолио наших работ</h2>
+          <p class="sec-desc-lg">Реальные автомобили клиентов в детейлинг-центре Garage F1 (г. Видное, Ермолинская 28).</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="assets/garagef1_facade.jpg" alt="Здание детейлинга Garage F1">
+            <div class="gallery-tag">Ермолинская 28</div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/garagef1_bay.jpg" alt="Детейлинг бокс со светодиодными сотами">
+            <div class="gallery-tag">Световой цех</div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/garagef1_wash.jpg" alt="Мойка днища Mercedes-AMG">
+            <div class="gallery-tag">Мойка подвески</div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/garagef1_ppf.jpg" alt="Оклейка PPF плёнкой">
+            <div class="gallery-tag">Оклейка крыши PPF</div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/garagef1_grille.jpg" alt="Кисточный детейлинг решетки радиатора">
+            <div class="gallery-tag">Деликатная чистка</div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/garagef1_engine.jpg" alt="Детейлинг двигателя паром">
+            <div class="gallery-tag">Мойка мотора паром</div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/garagef1_interior.jpg" alt="Химчистка салона Mercedes">
+            <div class="gallery-tag">Химчистка салона</div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/garagef1_wash.jpg" alt="Mercedes AMG в работе">
+            <div class="gallery-tag">Mercedes-AMG</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="sec-head-center">
+          <h2 class="sec-title-lg">Отзывы клиентов на Яндекс Картах</h2>
+          <p class="sec-desc-lg">Рейтинг 5.0 на основе реальных впечатлений автовладельцев.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-header">
+              <div>
+                <div class="review-user">Александр К.</div>
+                <div class="review-car">Mercedes E-Class &bull; Оклейка зон риска</div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <div class="review-body">
+              «Отличный детейлинг на Ермолинской! Оклеили морду и зоны риска в полиуретан. Сделали идеально, ни одного залома или пузыря, подвороты ровные. Мастера знают своё дело, рекомендую!»
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div>
+                <div class="review-user">Дмитрий В.</div>
+                <div class="review-car">BMW X5 &bull; Химчистка + Керамика</div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <div class="review-body">
+              «Отдавал машину на полную химчистку с разбором и керамику. Забрал будто из автосалона! Салон пахнет свежестью, на кузове сумасшедший гидрофоб и глубина цвета. Обязательно приеду ещё.»
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div>
+                <div class="review-user">Михаил С.</div>
+                <div class="review-car">Porsche Macan &bull; Мойка мотора паром</div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <div class="review-body">
+              «Мыли двигатель сухим паром. Всё законсервировали, ни капли химии на проводку не попало, всё блестит. Приятный вежливый персонал и нормальные цены. 5 звёзд без вопросов!»
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTS & LOCATION -->
+    <section class="section" id="contacts">
+      <div class="container">
+        <div class="sec-head-center">
+          <h2 class="sec-title-lg">Контакты и проезд</h2>
+        </div>
+
+        <div class="contacts-card">
+          <div>
+            <div class="contact-row">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              </div>
+              <div>
+                <div class="contact-title">Адрес детейлинг-центра</div>
+                <div class="contact-val">Московская обл., г. Видное, Ермолинская улица, 28</div>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              </div>
+              <div>
+                <div class="contact-title">График работы</div>
+                <div class="contact-val">Ежедневно с 10:00 до 22:00</div>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </div>
+              <div>
+                <div class="contact-title">Телефоны</div>
+                <div class="contact-val">+7 (915) 386-27-27 &bull; +7 (906) 840-40-04</div>
+              </div>
+            </div>
+
+            <div class="map-btns">
+              <a href="https://yandex.ru/maps/org/garage_f1/161199849627/" target="_blank" class="btn-map-link">
+                <span>Яндекс Карты</span>
+                ➔
+              </a>
+              <a href="https://yandex.ru/navi/?whatshere%5Bpoint%5D=37.716906%2C55.537619&whatshere%5Bzoom%5D=17" target="_blank" class="btn-map-link">
+                <span>Навигатор</span>
+                ➔
+              </a>
+            </div>
+          </div>
+
+          <div class="direct-wa-box">
+            <div>
+              <div class="direct-wa-title">Консультация и запись</div>
+              <p class="direct-wa-desc">Напишите марку автомобиля и желаемую услугу (оклейка, полировка, химчистка) — рассчитаем точную смету за 5 минут.</p>
+            </div>
+            <a href="https://wa.me/79153862727?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BF%D0%BE%20%D0%B4%D0%B5%D1%82%D0%B5%D0%B9%D0%BB%D0%B8%D0%BD%D0%B3%D1%83%20%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8F" class="btn-big-wa">
+              Написать мастеру в WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="footer">
+          Garage F1 &bull; Детейлинг-центр в г. Видное, Ермолинская ул., 28 &bull; 10:00–22:00 ежедневно
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- STICKY ACTION BAR (MOBILE ONLY) -->
+  <div class="sticky-bar">
+    <div class="sticky-inner">
+      <a href="tel:+79153862727" class="btn-sticky-call">
+        <svg style="width:16px;height:16px;fill:currentColor;" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <span>Позвонить</span>
+      </a>
+      <a href="https://wa.me/79153862727?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20Garage%20F1" class="btn-sticky-wa">
+        <span>В WhatsApp</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    let curCar = 'Седан';
+    let curSrv = 'Керамика 9H';
+    let basePrice = '15 000 ₽';
+
+    const priceMap = {
+      'Керамика 9H': { 'Седан': '15 000 ₽', 'Кроссовер': '18 000 ₽', 'Внедорожник': '22 000 ₽' },
+      'Химчистка салона': { 'Седан': '14 000 ₽', 'Кроссовер': '16 000 ₽', 'Внедорожник': '19 000 ₽' },
+      'Детейлинг мойка': { 'Седан': '12 000 ₽', 'Кроссовер': '14 000 ₽', 'Внедорожник': '16 000 ₽' },
+      'Полировка лобового': { 'Седан': '8 000 ₽', 'Кроссовер': '8 000 ₽', 'Внедорожник': '9 000 ₽' },
+      'Мойка двигателя': { 'Седан': '5 000 ₽', 'Кроссовер': '5 000 ₽', 'Внедорожник': '6 000 ₽' },
+      'Полировка фар': { 'Седан': '2 000 ₽', 'Кроссовер': '2 000 ₽', 'Внедорожник': '2 000 ₽' }
+    };
+
+    function updateCalc() {
+      const p = (priceMap[curSrv] && priceMap[curSrv][curCar]) ? priceMap[curSrv][curCar] : basePrice;
+      document.getElementById('calcName').textContent = curCar + ' • ' + curSrv;
+      document.getElementById('calcPrice').textContent = p;
+      const msg = 'Здравствуйте! Хочу записаться: ' + curCar + ' • ' + curSrv + ' (' + p + ')';
+      document.getElementById('calcLink').href = 'https://wa.me/79153862727?text=' + encodeURIComponent(msg);
+    }
+
+    document.querySelectorAll('#carGrid .chip').forEach(c => {
+      c.addEventListener('click', () => {
+        document.querySelectorAll('#carGrid .chip').forEach(x => x.classList.remove('active'));
+        c.classList.add('active');
+        curCar = c.getAttribute('data-c');
+        updateCalc();
+      });
+    });
+
+    document.querySelectorAll('#srvGrid .chip').forEach(c => {
+      c.addEventListener('click', () => {
+        document.querySelectorAll('#srvGrid .chip').forEach(x => x.classList.remove('active'));
+        c.classList.add('active');
+        curSrv = c.getAttribute('data-s');
+        basePrice = c.getAttribute('data-p');
+        updateCalc();
+      });
+    });
+
+    updateCalc();
+  </script>
+</body>
+</html>
